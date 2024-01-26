@@ -145,4 +145,4 @@ const getEndpoints = function (app: express.Express): Endpoint[] {
     return endpoints
 }
 
-export default getEndpoints
+export = getEndpoints
