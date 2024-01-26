@@ -6,7 +6,7 @@ Express endpoint parser to retrieve a list of the passed router with the set ver
 
 ## Example of use
 
-Warning: In contrast to the original package, this package does not merge the endpoints which are initialized with the same path.
+Warning: In contrast to the original package, this package does not merge the endpoints which are initialized in the same chain.
 
 ```javascript
 const listEndpoints = require('express-list-endpoints-2')
@@ -40,21 +40,25 @@ console.log(listEndpoints(app))
 
 /* It omits the 'all' verbs.
 [
-    {
-        path: '/',
-        methods: ['GET', 'POST'],
-        middlewares: [[Function namedMiddleware], [Function anonymous], [Function anonymous]],
-    },
-    {
-        path: '/',
-        methods: ['POST'],
-        middlewares: [[Function namedMiddleware2], [Function anonymous]],
-    },
-    {
-        path: '/about',
-        methods: ['GET'],
-        middlewares: [[Function anonymous]],
-    },
+  {
+    path: '/',
+    methods: [ 'GET', 'POST' ],
+    middlewares: [
+      [Function: namedMiddleware],
+      [Function (anonymous)],
+      [Function (anonymous)]
+    ]
+  },
+  {
+    path: '/',
+    methods: [ 'POST' ],
+    middlewares: [ [Function: namedMiddleware2], [Function (anonymous)] ]
+  },
+  {
+    path: '/about',
+    methods: [ 'GET' ],
+    middlewares: [ [Function (anonymous)] ]
+  }
 ]
 */
 ```
