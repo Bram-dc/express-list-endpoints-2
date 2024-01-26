@@ -9,8 +9,7 @@ Express endpoint parser to retrieve a list of the passed router with the set ver
 Warning: In contrast to the original package, this package does not merge the endpoints which are initialized with the same path.
 
 ```javascript
-import listEndpoints from 'express-list-endpoints-2'
-
+const listEndpoints = require('express-list-endpoints-2')
 const app = require('express')();
 
 app.route('/')
@@ -37,7 +36,7 @@ app.route('/about')
         // Handle request
     })
 
-console.log(listEndpoints(app));
+console.log(listEndpoints(app))
 
 /* It omits the 'all' verbs.
 [

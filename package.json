@@ -2,7 +2,7 @@
     "name": "express-list-endpoints-2",
     "version": "1.0.0",
     "description": "A modified version of express-list-endpoints",
-    "main": "index.ts",
+    "main": "dist/index.js",
     "scripts": {
         "build": "tsc"
     },
