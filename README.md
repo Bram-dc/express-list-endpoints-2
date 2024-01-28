@@ -1,12 +1,14 @@
-# Express List Endpoints
+# Express List Endpoints 2
 
 [![NPM](https://nodei.co/npm/express-list-endpoints-2.png)](https://nodei.co/npm/express-list-endpoints-2/)
 
-Express endpoint parser to retrieve a list of the passed router with the set verbs.
+Original package by [albertofdzm](https://www.npmjs.com/~albertofdzm)
+
+Express endpoint parser to retrieve a list of the routes and methods with their given request handlers.
 
 ## Example of use
 
-Warning: In contrast to the original package, this package does not merge the endpoints which are initialized in the same chain.
+Warning: In contrast to the original package, this package does not merge endpoints which are initialized in different chains.
 
 ```javascript
 const listEndpoints = require('express-list-endpoints-2')
@@ -69,8 +71,8 @@ console.log(listEndpoints(app))
 
 Your router instance (`router`) or your app instance (`app`).
 
-_**Note:** Pay attention that before call this script the router or app must have the endpoints registered due to detect them._
+_**Note:** Pay attention that before you call this script the router or app must have the endpoints registered first._
 
 ## License
 
-Express List Endpoints is [MIT licensed](./LICENSE).
+Express List Endpoints 2 is [MIT licensed](./LICENSE).
